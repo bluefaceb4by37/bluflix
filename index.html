@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="pl">
-<głowa>
- <meta zestaw znaków=„UTF-8„>
- <tytuł>Blufix - Twoje Filmy</tytuł>
- <link rel=„arkusz stylów„href=„styl.css„>
-</głowa>
-<ciało>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bluflix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Bluflix</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Główna</a></li>
+        <li><a href="#">Seriale erotyczne</a></li>
+        <li><a href="#">Filmy pornograficzne</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- Navbar -->
-<zawigacja klasa=„navbar„>
- <div klasa="logo">Blufix</div>
- <ul klasa=„linki zawigacyjne„>
- <li>Główna</li>
- <li>Seriale erotyczne</li>
- <li>Filmy pornograficzne</li>
- <li>Nowe i Popularne</li>
- <li>Moja Lista</li>
- </ul>
-</zawigacja>
+  <main class="movies-section">
+    <h2>Nowości</h2>
+    <div class="movies-grid">
+      <div class="movie" onclick="openVideo('https://www.youtube.com/embed/B2qxIb96rvQ')">
+        <img src="https://img.youtube.com/vi/B2qxIb96rvQ/mqdefault.jpg" alt="Film 1">
+      </div>
+      <div class="movie" onclick="openVideo('https://www.youtube.com/embed/H1Tfu59UHH4')">
+        <img src="https://img.youtube.com/vi/H1Tfu59UHH4/mqdefault.jpg" alt="Film 2">
+      </div>
+      <div class="movie" onclick="openVideo('https://www.youtube.com/embed/tV05n63jMjA')">
+        <img src="https://img.youtube.com/vi/tV05n63jMjA/mqdefault.jpg" alt="Film 3">
+      </div>
+      <div class="movie" onclick="openVideo('https://www.youtube.com/embed/ycoDUc0kRJo')">
+        <img src="https://img.youtube.com/vi/ycoDUc0kRJo/mqdefault.jpg" alt="Film 4">
+      </div>
+      <div class="movie" onclick="openVideo('https://www.youtube.com/embed/GTXUFRbyaZk')">
+        <img src="https://img.youtube.com/vi/GTXUFRbyaZk/mqdefault.jpg" alt="Film 5">
+      </div>
+    </div>
+  </main>
 
-<!-- Gracz -->
-<div identyfikator=„pojemnik-gracz„styl="wyświętl:żaden;">
- <div identyfikator=„nakładka gracza„kliknij=„zamknij wideo()„></div>
- <div identyfikator=„pudełko gracza„>
- <iframe identyfikator=„ramka wideo"szerokość=„100%" wysokaść=„500px frameborder="0" dopuszczalny ekran></iframe>
- <przycisk identyfikator=„zamknijBtn„kliknij="zamknij wideo()">✖ Zamknij</przycisk>
- </div>
-</div>
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeVideo()">&times;</span>
+      <iframe id="videoPlayer" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 
-<!-- Główna -->
-<sekcja klasa=„wiersz„>
- <h2>Główna</h2>
- <div klasa=„rząd-plakaty„>
- <img src=„https://img.youtube.com/vi/B2qxIb96rvQ/maxresdefault.jpg" alt=„Film 1" kliknij="otwórz wideo(„B2qxIb96rvQ")">
- </div>
-</sekcja>
-
-<!-- Seriale erotyczne -->
-<sekcja klasa=„wiersz„>
- <h2>Seriale erotycz
+  <script src="script.js"></script>
+</body>
+</html>
