@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluflix</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bluflix</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
 </head>
 <body>
-    <header>
-        <h1>Bluflix</h1>
-        <nav>
-            <ul>
-                <li><a href="#glowna">Główna</a></li>
-                <li><a href="#seriale-erotyczne">Seriale Erotyczne</a></li>
-                <li><a href="#filmy-pornograficzne">Filmy Pornograficzne</a></li>
-                <li><a href="#popularne">Popularne Teraz</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="glowna" class="category">
-            <h2>Główna</h2>
-            <div class="video-grid">
-                <!-- Tu wklejasz embed youtube -->
-                <iframe src="https://www.youtube.com/embed/A9fXR18kl0k" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/gkbxUiSb3HQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
+  <header>
+    <h1>Bluflix</h1>
+    <nav>
+      <a href="#glowna">Główna</a>
+      <a href="#seriale">Seriale Erotyczne</a>
+      <a href="#filmy">Filmy Pornograficzne</a>
+      <a href="#popularne">Popularne Teraz</a>
+    </nav>
+  </header>
 
-        <section id="seriale-erotyczne" class="category">
-            <h2>Seriale Erotyczne</h2>
-            <div class="video-grid">
-                <iframe src="https://www.youtube.com/embed/JTPbgHFo8cI" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/8PX1dTttb9s" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
+  <main>
 
-        <section id="filmy-pornograficzne" class="category">
-            <h2>Filmy Pornograficzne</h2>
-            <div class="video-grid">
-                <iframe src="https://www.youtube.com/embed/p_MWCtzKrkI" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/lP-cV4crIoY" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
+    <section id="glowna" class="category">
+      <h2>Główna</h2>
+      <div class="video-grid">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID2" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
 
-        <section id="popularne" class="category">
-            <h2>Popularne Teraz</h2>
-            <div class="video-grid">
-                <iframe src="https://www.youtube.com/embed/v3-4_4-owXI" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/A2lZRQbVO20" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
+    <section id="seriale" class="category">
+      <h2>Seriale Erotyczne</h2>
+      <div class="video-grid">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID3" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2025 Bluflix. Wszelkie prawa zastrzeżone.</p>
-    </footer>
+    <section id="filmy" class="category">
+      <h2>Filmy Pornograficzne</h2>
+      <div class="video-grid">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID5" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID6" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="popularne" class="category">
+      <h2>Popularne Teraz</h2>
+      <div class="video-grid">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID7" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/ID8" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
 </body>
 </html>
