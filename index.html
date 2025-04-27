@@ -6,7 +6,13 @@
   <title>Bluflix</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="hidePreloader()">
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-text">Bluflix</div>
+  </div>
+
   <header class="navbar">
     <div class="logo">Bluflix</div>
     <nav>
@@ -39,6 +45,12 @@
     </div>
   </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 Bluflix – Wszelkie prawa zastrzeżone
+  </footer>
+
+  <!-- MODAL VIDEO -->
   <div id="videoModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeVideo()">&times;</span>
