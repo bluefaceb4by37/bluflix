@@ -76,3 +76,45 @@ footer {
   color: #8ecae6;
   margin-top: 40px;
 }
+nav.sticky {
+    background-color: #0d0d0d;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.video iframe {
+    transition: transform 0.4s ease;
+}
+
+.video iframe:hover {
+    transform: scale(1.05);
+}
+
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
