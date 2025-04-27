@@ -1,19 +1,18 @@
-function openVideo(videoUrl) {
-  const modal = document.getElementById('videoModal');
-  const player = document.getElementById('videoPlayer');
-  player.src = videoUrl + "?autoplay=1";
-  modal.style.display = "block";
-}
 
-function closeVideo() {
-  const modal = document.getElementById('videoModal');
-  const player = document.getElementById('videoPlayer');
-  player.src = "";
-  modal.style.display = "none";
-}
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function hidePreloader() {
-  setTimeout(() => {
-    document.getElementById('preloader').style.display = 'none';
-  }, 2000); // ukrywa preloader po 2 sekundach
-}
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+scrollToTopBtn.addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
