@@ -120,3 +120,11 @@ section {
         transform: translateY(0);
     }
 }
+section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #13132b;
+    border-radius: 16px;
+    border: 1px solid #3399ff;
+    box-shadow: 0 0 10px rgba(51, 153, 255, 0.2);
+}
