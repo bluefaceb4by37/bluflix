@@ -11,3 +11,9 @@ function closeVideo() {
   player.src = "";
   modal.style.display = "none";
 }
+
+function hidePreloader() {
+  setTimeout(() => {
+    document.getElementById('preloader').style.display = 'none';
+  }, 2000); // ukrywa preloader po 2 sekundach
+}
