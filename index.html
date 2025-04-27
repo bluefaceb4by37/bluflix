@@ -11,65 +11,163 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Style -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0e0f24;
+            color: #fff;
+        }
+        nav {
+            background: #0e0f24;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav.sticky {
+            background: #1a1c3c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #272963;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        section {
+            padding: 2rem 1rem;
+        }
+        h2 {
+            margin-bottom: 1.5rem;
+            color: #6ea8ff;
+        }
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+        .video-card {
+            background: #181a36;
+            padding: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 16px;
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background: #6ea8ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">Bluflix</div>
-        <ul>
-            <li><a href="#glowna">Główna</a></li>
-            <li><a href="#seriale-erotyczne">Seriale Erotyczne</a></li>
-            <li><a href="#filmy-pornograficzne">Filmy Pornograficzne</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#glowna">Główna</a></li>
+        <li><a href="#seriale">Seriale Erotyczne</a></li>
+        <li><a href="#filmy">Filmy Pornograficzne</a></li>
+    </ul>
+</nav>
 
-    <!-- Główna -->
-    <section id="glowna" class="fade-in">
-        <h1>Witamy na Bluflix</h1>
-        <p>Oglądaj najlepsze produkcje w jednym miejscu!</p>
-        <div class="video-grid">
-            <iframe data-src="https://www.youtube.com/embed/B2qxIb96rvQ" title="Film 1" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/H1Tfu59UHH4" title="Film 2" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/tV05n63jMjA" title="Film 3" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/ycoDUc0kRJo" title="Film 4" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/GTXUFRbyaZk" title="Film 5" allowfullscreen loading="lazy"></iframe>
-        </div>
-    </section>
+<header>
+    <h1>Witamy na Bluflix</h1>
+    <p>Oglądaj najlepsze produkcje w jednym miejscu!</p>
+</header>
 
-    <!-- Seriale Erotyczne -->
-    <section id="seriale-erotyczne" class="fade-in">
-        <h2>Seriale Erotyczne</h2>
-        <div class="video-grid">
-            <iframe data-src="https://www.youtube.com/embed/A9fXR18kl0k" title="Serial 1" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/gkbxUiSb3HQ" title="Serial 2" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/JTPbgHFo8cI" title="Serial 3" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/8PX1dTttb9s" title="Serial 4" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/p_MWCtzKrkI" title="Serial 5" allowfullscreen loading="lazy"></iframe>
-        </div>
-    </section>
+<section id="glowna">
+    <h2>Główna</h2>
+    <div class="videos">
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/1" allowfullscreen></iframe></div>
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/2" allowfullscreen></iframe></div>
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/3" allowfullscreen></iframe></div>
+    </div>
+</section>
 
-    <!-- Filmy Pornograficzne -->
-    <section id="filmy-pornograficzne" class="fade-in">
-        <h2>Filmy Pornograficzne</h2>
-        <div class="video-grid">
-            <iframe data-src="https://www.youtube.com/embed/lP-cV4crIoY" title="Film 6" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/v3-4_4-owXI" title="Film 7" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/A2lZRQbVO20" title="Film 8" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/Kh6opRJ9_M0" title="Film 9" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/mgQVD6QUVBE" title="Film 10" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/vJj4ktxMDhQ" title="Film 11" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/z4Utm5VJCZE" title="Film 12" allowfullscreen loading="lazy"></iframe>
-            <iframe data-src="https://www.youtube.com/embed/pLBCIKtM8_Q" title="Film 13" allowfullscreen loading="lazy"></iframe>
-        </div>
-    </section>
+<section id="seriale">
+    <h2>Seriale Erotyczne</h2>
+    <div class="videos">
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/4" allowfullscreen></iframe></div>
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/5" allowfullscreen></iframe></div>
+    </div>
+</section>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn">↑</button>
+<section id="filmy">
+    <h2>Filmy Pornograficzne</h2>
+    <div class="videos">
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/6" allowfullscreen></iframe></div>
+    </div>
+</section>
 
-    <!-- Script -->
-    <script src="script.js"></script>
+<button id="scrollToTopBtn">&uarr;</button>
+
+<!-- Script -->
+<script>
+// Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+// Sticky Navbar
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('nav');
+        navbar.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+// Scroll to top button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    window.addEventListener("scroll", () => {
+        scrollToTopBtn.style.display = window.pageYOffset > 300 ? "block" : "none";
+    });
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
 </body>
 </html>
