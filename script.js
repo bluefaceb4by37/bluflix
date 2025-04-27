@@ -1,17 +1,80 @@
 
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  loader.style.display = "none";
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
 
-const sections = document.querySelectorAll('.section');
-
 window.addEventListener('scroll', () => {
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if(sectionTop < window.innerHeight - 100) {
-      section.classList.add('visible');
+    const navbar = document.querySelector('nav');
+    navbar.classList.toggle('sticky', window.scrollY > 0);
+});
+
+
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.3,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
     }
-  });
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const iframes = document.querySelectorAll("iframe[data-src]");
+
+    const lazyLoad = function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                iframe.src = iframe.getAttribute("data-src");
+                observer.unobserve(iframe);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(lazyLoad, {
+        rootMargin: "0px 0px 200px 0px",
+        threshold: 0
+    });
+
+    iframes.forEach(iframe => {
+        observer.observe(iframe);
+    });
 });
