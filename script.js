@@ -1,4 +1,4 @@
-
+// Smooth scroll dla anchorów
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,13 +8,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
+// Sticky navbar
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('nav');
     navbar.classList.toggle('sticky', window.scrollY > 0);
 });
 
-
+// Fade-in animacje przy scrollu
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
@@ -37,7 +37,7 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
-
+// Scroll-to-top button
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
@@ -55,7 +55,7 @@ scrollToTopBtn.addEventListener("click", () => {
     });
 });
 
-
+// Lazy loading iframe
 document.addEventListener("DOMContentLoaded", function() {
     const iframes = document.querySelectorAll("iframe[data-src]");
 
