@@ -1,4 +1,6 @@
-// Smooth scroll dla anchorów
+/* ====== SCRIPT.JS ====== */
+
+// Płynne przewijanie po kliknięciu w linki
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -14,7 +16,7 @@ window.addEventListener('scroll', () => {
     navbar.classList.toggle('sticky', window.scrollY > 0);
 });
 
-// Fade-in animacje przy scrollu
+// Efekt pojawiania się sekcji
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
@@ -37,7 +39,7 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
-// Scroll-to-top button
+// Przycisk scroll do góry
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
@@ -55,7 +57,7 @@ scrollToTopBtn.addEventListener("click", () => {
     });
 });
 
-// Lazy loading iframe
+// Lazy loading dla iframe
 document.addEventListener("DOMContentLoaded", function() {
     const iframes = document.querySelectorAll("iframe[data-src]");
 
