@@ -1,110 +1,75 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluflix</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bluflix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-<header class="header">
-    <div class="logo">Bluflix</div>
-    <nav class="nav">
-        <a href="#glowna">Główna</a>
-        <a href="#seriale">Seriale Erotyczne</a>
-        <a href="#filmy">Filmy Pornograficzne</a>
-        <a href="#popularne">Popularne Teraz</a>
-    </nav>
-</header>
+<!-- Loader -->
+<div id="loader">
+  <h1>Ładowanie Bluflix...</h1>
+</div>
 
-<main>
-    <section id="glowna">
-        <h2>Główna</h2>
-        <div class="movies-grid">
-            <!-- FILMY GŁÓWNE -->
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/B2qxIb96rvQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/H1Tfu59UHH4" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/tV05n63jMjA" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Bluflix</div>
+  <ul class="nav-links">
+    <li><a href="#glowna">Główna</a></li>
+    <li><a href="#seriale">Seriale erotyczne</a></li>
+    <li><a href="#filmy">Filmy pornograficzne</a></li>
+  </ul>
+</nav>
 
-    <section id="seriale">
-        <h2>Seriale Erotyczne</h2>
-        <div class="movies-grid">
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/ycoDUc0kRJo" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/GTXUFRbyaZk" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/A9fXR18kl0k" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/gkbxUiSb3HQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+<!-- Główna sekcja -->
+<section id="glowna" class="section">
+  <h2>Główna</h2>
+  <div class="videos">
+    <!-- Filmy Główna -->
+    <iframe src="https://www.youtube.com/embed/B2qxIb96rvQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/H1Tfu59UHH4" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/tV05n63jMjA" allowfullscreen></iframe>
+  </div>
+</section>
 
-    <section id="filmy">
-        <h2>Filmy Pornograficzne</h2>
-        <div class="movies-grid">
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/JTPbgHFo8cI" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/8PX1dTttb9s" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/p_MWCtzKrkI" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/lP-cV4crIoY" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/v3-4_4-owXI" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+<!-- Seriale erotyczne -->
+<section id="seriale" class="section">
+  <h2>Seriale erotyczne</h2>
+  <div class="videos">
+    <!-- Filmy Seriale -->
+    <iframe src="https://www.youtube.com/embed/ycoDUc0kRJo" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/GTXUFRbyaZk" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/A9fXR18kl0k" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/gkbxUiSb3HQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/JTPbgHFo8cI" allowfullscreen></iframe>
+  </div>
+</section>
 
-    <section id="popularne">
-        <h2>Popularne Teraz</h2>
-        <div class="movies-grid">
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/A2lZRQbVO20" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/Kh6opRJ9_M0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/mgQVD6QUVBE" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/vJj4ktxMDhQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/z4Utm5VJCZE" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="movie">
-                <iframe src="https://www.youtube.com/embed/pLBCIKtM8_Q" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-</main>
+<!-- Filmy pornograficzne -->
+<section id="filmy" class="section">
+  <h2>Filmy pornograficzne</h2>
+  <div class="videos">
+    <!-- Filmy Filmy -->
+    <iframe src="https://www.youtube.com/embed/8PX1dTttb9s" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/p_MWCtzKrkI" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/lP-cV4crIoY" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/v3-4_4-owXI" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/A2lZRQbVO20" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Kh6opRJ9_M0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/mgQVD6QUVBE" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/vJj4ktxMDhQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/z4Utm5VJCZE" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/pLBCIKtM8_Q" allowfullscreen></iframe>
+  </div>
+</section>
 
-<footer class="footer">
-    <p>© <span id="year"></span> Bluflix. Wszelkie prawa zastrzeżone.</p>
+<footer>
+  <p>© 2025 Bluflix. Wszystkie prawa zastrzeżone.</p>
 </footer>
 
-<button id="scrollToTopBtn">⬆</button>
-
-<script src="script.js"></script>
 </body>
 </html>
