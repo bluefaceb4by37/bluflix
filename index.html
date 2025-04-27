@@ -1,95 +1,75 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluflix</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluflix</title>
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Style -->
-  <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header class="navbar">
-    <div class="logo">Bluflix</div>
+    <!-- Navbar -->
     <nav>
-      <ul>
-        <li><a href="#glowna">Główna</a></li>
-        <li><a href="#seriale">Seriale Erotyczne</a></li>
-        <li><a href="#filmy">Filmy Pornograficzne</a></li>
-      </ul>
+        <div class="logo">Bluflix</div>
+        <ul>
+            <li><a href="#glowna">Główna</a></li>
+            <li><a href="#seriale-erotyczne">Seriale Erotyczne</a></li>
+            <li><a href="#filmy-pornograficzne">Filmy Pornograficzne</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <!-- Sekcja Główna -->
-    <section id="glowna" class="section">
-      <h2>Główna</h2>
-      <div class="videos">
-        <!-- Filmy z YouTube -->
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/B2qxIb96rvQ" title="Film 1" allowfullscreen loading="lazy"></iframe>
+    <!-- Główna -->
+    <section id="glowna" class="fade-in">
+        <h1>Witamy na Bluflix</h1>
+        <p>Oglądaj najlepsze produkcje w jednym miejscu!</p>
+        <div class="video-grid">
+            <iframe data-src="https://www.youtube.com/embed/B2qxIb96rvQ" title="Film 1" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/H1Tfu59UHH4" title="Film 2" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/tV05n63jMjA" title="Film 3" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/ycoDUc0kRJo" title="Film 4" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/GTXUFRbyaZk" title="Film 5" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/H1Tfu59UHH4" title="Film 2" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
     </section>
 
-    <!-- Sekcja Seriale Erotyczne -->
-    <section id="seriale" class="section">
-      <h2>Seriale Erotyczne</h2>
-      <div class="videos">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/tV05n63jMjA" title="Film 3" allowfullscreen loading="lazy"></iframe>
+    <!-- Seriale Erotyczne -->
+    <section id="seriale-erotyczne" class="fade-in">
+        <h2>Seriale Erotyczne</h2>
+        <div class="video-grid">
+            <iframe data-src="https://www.youtube.com/embed/A9fXR18kl0k" title="Serial 1" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/gkbxUiSb3HQ" title="Serial 2" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/JTPbgHFo8cI" title="Serial 3" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/8PX1dTttb9s" title="Serial 4" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/p_MWCtzKrkI" title="Serial 5" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/ycoDUc0kRJo" title="Film 4" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/A9fXR18kl0k" title="Film 5" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/gkbxUiSb3HQ" title="Film 6" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
     </section>
 
-    <!-- Sekcja Filmy Pornograficzne -->
-    <section id="filmy" class="section">
-      <h2>Filmy Pornograficzne</h2>
-      <div class="videos">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/GTXUFRbyaZk" title="Film 7" allowfullscreen loading="lazy"></iframe>
+    <!-- Filmy Pornograficzne -->
+    <section id="filmy-pornograficzne" class="fade-in">
+        <h2>Filmy Pornograficzne</h2>
+        <div class="video-grid">
+            <iframe data-src="https://www.youtube.com/embed/lP-cV4crIoY" title="Film 6" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/v3-4_4-owXI" title="Film 7" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/A2lZRQbVO20" title="Film 8" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/Kh6opRJ9_M0" title="Film 9" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/mgQVD6QUVBE" title="Film 10" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/vJj4ktxMDhQ" title="Film 11" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/z4Utm5VJCZE" title="Film 12" allowfullscreen loading="lazy"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/pLBCIKtM8_Q" title="Film 13" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/JTPbgHFo8cI" title="Film 8" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/8PX1dTttb9s" title="Film 9" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/p_MWCtzKrkI" title="Film 10" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/lP-cV4crIoY" title="Film 11" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
     </section>
 
-    <!-- Przyciski -->
+    <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn">↑</button>
 
-  </main>
-
-  <!-- Script -->
-  <script src="script.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>
