@@ -1,9 +1,13 @@
-function openVideo(id) {
-  document.getElementById('videoFrame').src = `https://www.youtube.com/embed/${id}?autoplay=1`;
-  document.getElementById('player-container').style.display = 'flex';
+function openVideo(videoUrl) {
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('videoPlayer');
+  player.src = videoUrl + "?autoplay=1";
+  modal.style.display = "block";
 }
 
 function closeVideo() {
-  document.getElementById('videoFrame').src = '';
-  document.getElementById('player-container').style.display = 'none';
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('videoPlayer');
+  player.src = "";
+  modal.style.display = "none";
 }
