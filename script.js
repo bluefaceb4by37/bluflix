@@ -1,18 +1,17 @@
 
-document.getElementById("year").textContent = new Date().getFullYear();
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none";
+});
 
 
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const sections = document.querySelectorAll('.section');
 
-window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
+window.addEventListener('scroll', () => {
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if(sectionTop < window.innerHeight - 100) {
+      section.classList.add('visible');
     }
-};
-
-scrollToTopBtn.addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  });
 });
