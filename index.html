@@ -2,198 +2,72 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <title>Bluflix - Nowa Wersja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluflix</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #0a0a23, #062135);
-            color: white;
-        }
-        nav {
-            background: #050514;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        section {
-            padding: 3rem 2rem;
-        }
-        .videos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-        .videos iframe {
-            width: 300px;
-            height: 170px;
-            border-radius: 12px;
-            border: none;
-        }
-        h1, h2 {
-            margin-bottom: 1rem;
-        }
-        .section-title {
-            border-left: 5px solid #007bff;
-            padding-left: 0.5rem;
-            margin-bottom: 2rem;
-        }
-        #scrollToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 1rem;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            z-index: 999;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    
+    <!-- Mój Style -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <div>Bluflix</div>
-    <ul>
-        <li><a href="#glowna">Główna</a></li>
-        <li><a href="#seriale">Seriale Erotyczne</a></li>
-        <li><a href="#filmy">Filmy Pornograficzne</a></li>
-    </ul>
-</nav>
+<header>
+    <h1>Bluflix</h1>
+</header>
 
-<section id="glowna" class="fade-in">
-    <h1>Witamy na Bluflix</h1>
-    <p>Oglądaj najlepsze produkcje w jednym miejscu!</p>
-    <div class="videos">
-        <iframe src="https://www.youtube.com/embed/B2qxIb96rvQ" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/H1Tfu59UHH4" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/tV05n63jMjA" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/ycoDUc0kRJo" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/GTXUFRbyaZk" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/A9fXR18kl0k" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/gkbxUiSb3HQ" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/JTPbgHFo8cI" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/8PX1dTttb9s" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/p_MWCtzKrkI" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/lP-cV4crIoY" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/v3-4_4-owXI" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/A2lZRQbVO20" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/Kh6opRJ9_M0" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/mgQVD6QUVBE" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/vJj4ktxMDhQ" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/z4Utm5VJCZE" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/pLBCIKtM8_Q" loading="lazy"></iframe>
-    </div>
-</section>
+<main>
+    <section id="player-section">
+        <div class="plyr__video-embed" id="player">
+            <iframe
+                src="https://www.youtube.com/embed/B2qxIb96rvQ?origin=https://yourdomain.com&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+            ></iframe>
+        </div>
+    </section>
 
-<section id="seriale" class="fade-in">
-    <h2 class="section-title">Seriale Erotyczne</h2>
-    <div class="videos">
-        <iframe src="https://www.youtube.com/embed/uxEdecXvzwgv" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/T434-vd6WEk" loading="lazy"></iframe>
-    </div>
-</section>
+    <section id="filmy">
+        <h2>Filmy</h2>
+        <div class="video-grid">
 
-<section id="filmy" class="fade-in">
-    <h2 class="section-title">Filmy Pornograficzne</h2>
-    <div class="videos">
-        <iframe src="https://www.youtube.com/embed/tNhNMSoXXaQ" loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/ayLhdw5U5qw" loading="lazy"></iframe>
-    </div>
-</section>
+            <!-- Miniaturki -->
+            <div class="video-thumb" data-video-id="B2qxIb96rvQ">
+                <img src="https://img.youtube.com/vi/B2qxIb96rvQ/hqdefault.jpg" alt="Film 1">
+            </div>
 
-<button id="scrollToTopBtn">&#8679;</button>
+            <div class="video-thumb" data-video-id="H1Tfu59UHH4">
+                <img src="https://img.youtube.com/vi/H1Tfu59UHH4/hqdefault.jpg" alt="Film 2">
+            </div>
 
-<script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+            <div class="video-thumb" data-video-id="tV05n63jMjA">
+                <img src="https://img.youtube.com/vi/tV05n63jMjA/hqdefault.jpg" alt="Film 3">
+            </div>
 
-    // Sticky navbar
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('nav');
-        navbar.classList.toggle('sticky', window.scrollY > 0);
-    });
+            <div class="video-thumb" data-video-id="ycoDUc0kRJo">
+                <img src="https://img.youtube.com/vi/ycoDUc0kRJo/hqdefault.jpg" alt="Film 4">
+            </div>
 
-    // Fade-in effect
-    const faders = document.querySelectorAll('.fade-in');
+            <div class="video-thumb" data-video-id="GTXUFRbyaZk">
+                <img src="https://img.youtube.com/vi/GTXUFRbyaZk/hqdefault.jpg" alt="Film 5">
+            </div>
 
-    const appearOptions = {
-        threshold: 0.3,
-        rootMargin: "0px 0px -50px 0px"
-    };
+            <!-- Dodamy więcej jak chcesz -->
+        </div>
+    </section>
+</main>
 
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('appear');
-                appearOnScroll.unobserve(entry.target);
-            }
-        });
-    }, appearOptions);
+<!-- Scroll do góry -->
+<button id="scrollToTopBtn">▲</button>
 
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
+<!-- Plyr JS -->
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
-    // Scroll to top button
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    });
-
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-</script>
+<!-- Mój Script -->
+<script src="script.js"></script>
 
 </body>
 </html>
