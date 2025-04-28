@@ -2,72 +2,36 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Bluflix - Nowa Wersja</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    
-    <!-- Mój Style -->
+    <title>Bluflix - Filmy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/png">
 </head>
-
 <body>
 
 <header>
     <h1>Bluflix</h1>
 </header>
 
-<main>
-    <section id="player-section">
-        <div class="plyr__video-embed" id="player">
-            <iframe
-                src="https://www.youtube.com/embed/B2qxIb96rvQ?origin=https://yourdomain.com&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0"
-                allowfullscreen
-                allowtransparency
-                allow="autoplay"
-            ></iframe>
-        </div>
-    </section>
-
-    <section id="filmy">
-        <h2>Filmy</h2>
-        <div class="video-grid">
-
-            <!-- Miniaturki -->
-            <div class="video-thumb" data-video-id="B2qxIb96rvQ">
-                <img src="https://img.youtube.com/vi/B2qxIb96rvQ/hqdefault.jpg" alt="Film 1">
-            </div>
-
-            <div class="video-thumb" data-video-id="H1Tfu59UHH4">
-                <img src="https://img.youtube.com/vi/H1Tfu59UHH4/hqdefault.jpg" alt="Film 2">
-            </div>
-
-            <div class="video-thumb" data-video-id="tV05n63jMjA">
-                <img src="https://img.youtube.com/vi/tV05n63jMjA/hqdefault.jpg" alt="Film 3">
-            </div>
-
-            <div class="video-thumb" data-video-id="ycoDUc0kRJo">
-                <img src="https://img.youtube.com/vi/ycoDUc0kRJo/hqdefault.jpg" alt="Film 4">
-            </div>
-
-            <div class="video-thumb" data-video-id="GTXUFRbyaZk">
-                <img src="https://img.youtube.com/vi/GTXUFRbyaZk/hqdefault.jpg" alt="Film 5">
-            </div>
-
-            <!-- Dodamy więcej jak chcesz -->
-        </div>
-    </section>
+<main class="gallery">
+    <a href="film.html?id=B2qxIb96rvQ"><img src="https://img.youtube.com/vi/B2qxIb96rvQ/mqdefault.jpg" alt="Film 1"></a>
+    <a href="film.html?id=H1Tfu59UHH4"><img src="https://img.youtube.com/vi/H1Tfu59UHH4/mqdefault.jpg" alt="Film 2"></a>
+    <a href="film.html?id=tV05n63jMjA"><img src="https://img.youtube.com/vi/tV05n63jMjA/mqdefault.jpg" alt="Film 3"></a>
+    <a href="film.html?id=ycoDUc0kRJo"><img src="https://img.youtube.com/vi/ycoDUc0kRJo/mqdefault.jpg" alt="Film 4"></a>
+    <a href="film.html?id=GTXUFRbyaZk"><img src="https://img.youtube.com/vi/GTXUFRbyaZk/mqdefault.jpg" alt="Film 5"></a>
+    <a href="film.html?id=A9fXR18kl0k"><img src="https://img.youtube.com/vi/A9fXR18kl0k/mqdefault.jpg" alt="Film 6"></a>
+    <a href="film.html?id=gkbxUiSb3HQ"><img src="https://img.youtube.com/vi/gkbxUiSb3HQ/mqdefault.jpg" alt="Film 7"></a>
+    <a href="film.html?id=JTPbgHFo8cI"><img src="https://img.youtube.com/vi/JTPbgHFo8cI/mqdefault.jpg" alt="Film 8"></a>
+    <a href="film.html?id=8PX1dTttb9s"><img src="https://img.youtube.com/vi/8PX1dTttb9s/mqdefault.jpg" alt="Film 9"></a>
+    <a href="film.html?id=p_MWCtzKrkI"><img src="https://img.youtube.com/vi/p_MWCtzKrkI/mqdefault.jpg" alt="Film 10"></a>
+    <a href="film.html?id=lP-cV4crIoY"><img src="https://img.youtube.com/vi/lP-cV4crIoY/mqdefault.jpg" alt="Film 11"></a>
+    <a href="film.html?id=v3-4_4-owXI"><img src="https://img.youtube.com/vi/v3-4_4-owXI/mqdefault.jpg" alt="Film 12"></a>
+    <a href="film.html?id=A2lZRQbVO20"><img src="https://img.youtube.com/vi/A2lZRQbVO20/mqdefault.jpg" alt="Film 13"></a>
+    <a href="film.html?id=Kh6opRJ9_M0"><img src="https://img.youtube.com/vi/Kh6opRJ9_M0/mqdefault.jpg" alt="Film 14"></a>
+    <a href="film.html?id=mgQVD6QUVBE"><img src="https://img.youtube.com/vi/mgQVD6QUVBE/mqdefault.jpg" alt="Film 15"></a>
+    <a href="film.html?id=vJj4ktxMDhQ"><img src="https://img.youtube.com/vi/vJj4ktxMDhQ/mqdefault.jpg" alt="Film 16"></a>
+    <a href="film.html?id=z4Utm5VJCZE"><img src="https://img.youtube.com/vi/z4Utm5VJCZE/mqdefault.jpg" alt="Film 17"></a>
+    <a href="film.html?id=pLBCIKtM8_Q"><img src="https://img.youtube.com/vi/pLBCIKtM8_Q/mqdefault.jpg" alt="Film 18"></a>
 </main>
-
-<!-- Scroll do góry -->
-<button id="scrollToTopBtn">▲</button>
-
-<!-- Plyr JS -->
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-
-<!-- Mój Script -->
-<script src="script.js"></script>
 
 </body>
 </html>
