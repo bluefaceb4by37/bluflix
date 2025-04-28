@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bluflix - Odtwarzacz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+<body>
+
+<header>
+    <h1>Bluflix - Oglądaj Film</h1>
+</header>
+
+<div id="player-container">
+    <div class="plyr__video-embed" id="player">
+        <iframe id="video-frame" src="" allowfullscreen allow="autoplay"></iframe>
+    </div>
+</div>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+    const player = new Plyr('#player');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoId = urlParams.get('id');
+
+    if (videoId) {
+        const iframe = document.getElementById('video-frame');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&origin=${window.location.origin}&iv_load_policy=3&modestbranding=1&rel=0`;
+    } else {
+        alert('Nie podano ID filmu!');
+    }
+</script>
+
+</body>
+</html>
