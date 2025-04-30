@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Bluflix - Odtwarzacz</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon-32x32.png" type="image/png">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <meta charset="UTF-8">
+  <title>Odtwarzacz Bluflix</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1 class="animated-title">🎬 Bluflix - Player</h1>
+    <a href="index.html" class="nav-link">← Wróć do strony głównej</a>
+  </header>
 
-<header>
-    <h1>Bluflix - Oglądaj Film</h1>
-</header>
+  <main style="text-align:center; padding: 2em;">
+    <div id="player-container"></div>
+  </main>
 
-<div id="player-container">
-    <div class="plyr__video-embed" id="player">
-        <!-- UWAGA: tutaj NIE UŻYWAMY src od razu -->
-        <iframe allowfullscreen allowtransparency allow="autoplay"></iframe>
-    </div>
-</div>
-
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const videoId = urlParams.get('id');
-
-    if (videoId) {
-        const playerContainer = document.getElementById('player');
-        const iframe = playerContainer.querySelector('iframe');
-
-        // ustaw odpowiednie atrybuty dla Plyr
-        iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?origin=${window.location.origin}&iv_load_policy=3&modestbranding=1&rel=0`);
-        iframe.setAttribute('data-plyr-provider', 'youtube');
-        iframe.setAttribute('data-plyr-embed-id', videoId);
-
-        const player = new Plyr('#player', {
-            youtube: {
-                noCookie: true
-            }
-        });
+  <script>
+    const movies = {
+      1: "B2qxIb96rvQ", 2: "H1Tfu59UHH4", 3: "tV05n63jMjA", 4: "ycoDUc0kRJo",
+      5: "GTXUFRbyaZk", 6: "A9fXR18kl0k", 7: "gkbxUiSb3HQ", 8: "JTPbgHFo8cI",
+      9: "8PX1dTttb9s", 10: "p_MWCtzKrkI", 11: "lP-cV4crIoY", 12: "v3-4_4-owXI",
+      13: "A2lZRQbVO20", 14: "Kh6opRJ9_M0", 15: "mgQVD6QUVBE", 16: "vJj4ktxMDhQ",
+      17: "z4Utm5VJCZE", 18: "pLBCIKtM8_Q"
+    };
+    const id = new URLSearchParams(window.location.search).get('id');
+    const yt = movies[id];
+    if (yt) {
+      document.getElementById('player-container').innerHTML = `
+        <iframe width="90%" height="500" src="https://www.youtube.com/embed/${yt}" frameborder="0" allowfullscreen></iframe>
+      `;
     } else {
-        alert('Nie podano ID filmu!');
+      document.getElementById('player-container').innerHTML = '<p>Nie znaleziono filmu.</p>';
     }
-</script>
-
+  </script>
 </body>
 </html>
