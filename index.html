@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluflix - Filmy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bluflix - Twoje Filmy</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="loader-wrapper"><div class="loader"></div></div>
 
-<header>
-    <h1>Bluflix</h1>
+  <header>
+    <h1 class="animated-title">🎬 Bluflix</h1>
     <nav>
-        <a href="#filmy">Filmy</a>
+      <ul>
+        <li><a href="#" class="nav-link">Strona główna</a></li>
+        <li><button id="toggle-theme">Tryb nocny</button></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main id="filmy">
-    <div class="movies-grid">
-        <a href="film1.html"><img src="thumbs/thumb1.jpg" alt="Film 1"></a>
-        <a href="film2.html"><img src="thumbs/thumb2.jpg" alt="Film 2"></a>
-        <a href="film3.html"><img src="thumbs/thumb3.jpg" alt="Film 3"></a>
-        <a href="film4.html"><img src="thumbs/thumb4.jpg" alt="Film 4"></a>
-        <a href="film5.html"><img src="thumbs/thumb5.jpg" alt="Film 5"></a>
-        <!-- Dodaj więcej według potrzeb -->
-    </div>
-</main>
+  <main>
+    <section class="movie-gallery" id="movieGallery"></section>
+  </main>
 
-<button id="scrollToTopBtn">↑</button>
+  <footer>
+    <p>&copy; 2025 Bluflix. Wszelkie prawa zastrzeżone.</p>
+    <p>Liczba odwiedzin: <span id="visit-count">0</span></p>
+  </footer>
 
-<script src="script.js"></script>
-
+  <button id="scrollTopBtn">▲</button>
 </body>
 </html>
