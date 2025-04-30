@@ -1,29 +1,54 @@
-// Inicjalizacja Plyr
-const player = new Plyr('#player');
+document.addEventListener('DOMContentLoaded', () => {
+  const loader = document.querySelector('.loader-wrapper');
+  setTimeout(() => loader.style.display = 'none', 1000);
 
-// Obsługa kliknięcia miniaturki
-document.querySelectorAll('.video-thumb').forEach(thumb => {
-    thumb.addEventListener('click', () => {
-        const videoId = thumb.getAttribute('data-video-id');
-        const iframe = document.querySelector('#player iframe');
-        iframe.src = `https://www.youtube.com/embed/${videoId}?origin=https://yourdomain.com&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&autoplay=1`;
-    });
-});
+  const movies = [
+    { id: 1, title: "Film 1", yt: "B2qxIb96rvQ" },
+    { id: 2, title: "Film 2", yt: "H1Tfu59UHH4" },
+    { id: 3, title: "Film 3", yt: "tV05n63jMjA" },
+    { id: 4, title: "Film 4", yt: "ycoDUc0kRJo" },
+    { id: 5, title: "Film 5", yt: "GTXUFRbyaZk" },
+    { id: 6, title: "Film 6", yt: "A9fXR18kl0k" },
+    { id: 7, title: "Film 7", yt: "gkbxUiSb3HQ" },
+    { id: 8, title: "Film 8", yt: "JTPbgHFo8cI" },
+    { id: 9, title: "Film 9", yt: "8PX1dTttb9s" },
+    { id: 10, title: "Film 10", yt: "p_MWCtzKrkI" },
+    { id: 11, title: "Film 11", yt: "lP-cV4crIoY" },
+    { id: 12, title: "Film 12", yt: "v3-4_4-owXI" },
+    { id: 13, title: "Film 13", yt: "A2lZRQbVO20" },
+    { id: 14, title: "Film 14", yt: "Kh6opRJ9_M0" },
+    { id: 15, title: "Film 15", yt: "mgQVD6QUVBE" },
+    { id: 16, title: "Film 16", yt: "vJj4ktxMDhQ" },
+    { id: 17, title: "Film 17", yt: "z4Utm5VJCZE" },
+    { id: 18, title: "Film 18", yt: "pLBCIKtM8_Q" }
+  ];
 
-// Scroll do góry
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const gallery = document.getElementById('movieGallery');
+  movies.forEach(movie => {
+    const card = document.createElement('div');
+    card.className = 'movie-card';
+    card.innerHTML = `
+      <img src="https://img.youtube.com/vi/${movie.yt}/0.jpg" alt="${movie.title}">
+      <div class="movie-title">${movie.title}</div>
+    `;
+    card.onclick = () => window.location.href = `film.html?id=${movie.id}`;
+    gallery.appendChild(card);
+  });
 
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-});
+  // Licznik odwiedzin
+  let visits = localStorage.getItem('visit-count') || 0;
+  visits++;
+  localStorage.setItem('visit-count', visits);
+  document.getElementById('visit-count').innerText = visits;
 
-scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+  // Scroll top
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  window.onscroll = () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  };
+  scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Dark mode toggle
+  const toggle = document.getElementById('toggle-theme');
+  toggle.onclick = () => document.body.classList.toggle('dark');
 });
