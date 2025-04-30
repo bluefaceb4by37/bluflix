@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => loader.style.display = 'none', 1000);
 
   const movies = [
-    { id: 1, title: "B.A.D. POP - ZOLTY JESIENNY LISC", yt: "B2qxIb96rvQ" },
-    { id: 2, title: "POPEK & DENIS & EW SZATANSKIE DISCO LOVE SONG", yt: "H1Tfu59UHH4" },
-    { id: 3, title: "Trelinka u Szwagra - Video Dowcip", yt: "tV05n63jMjA" },
-    { id: 4, title: "20.000.000 PLN BUGATTI CHIRON w Warszawie! 🤩 1500 HP + wywiad z właścicielem (biznesman)", yt: "ycoDUc0kRJo" },
+    { id: 1, title: "Film 1", yt: "B2qxIb96rvQ" },
+    { id: 2, title: "Film 2", yt: "H1Tfu59UHH4" },
+    { id: 3, title: "Film 3", yt: "tV05n63jMjA" },
+    { id: 4, title: "Film 4", yt: "ycoDUc0kRJo" },
     { id: 5, title: "Film 5", yt: "GTXUFRbyaZk" },
     { id: 6, title: "Film 6", yt: "A9fXR18kl0k" },
     { id: 7, title: "Film 7", yt: "gkbxUiSb3HQ" },
