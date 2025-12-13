@@ -2,10 +2,87 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluflix — Kino w lepszym wydaniu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="loader-wrapper"><div class="loader"></div></div>
+
+  <header class="site-header">
+    <div class="brand">🎬 <span class="brand-name">Bluflix</span></div>
+    <nav class="main-nav" aria-label="Główna nawigacja">
+      <button class="nav-btn" data-tab="home" aria-selected="true">Home</button>
+      <button class="nav-btn" data-tab="browse">Przeglądaj</button>
+      <button class="nav-btn" data-tab="mylist">Moje</button>
+      <div class="nav-actions">
+        <input id="search" class="search" placeholder="Szukaj..." aria-label="Szukaj filmów" />
+        <button id="toggle-theme" class="icon-btn" aria-pressed="false">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <h2 class="hero-title">Oglądaj. Płynnie. Pięknie.</h2>
+        <p class="hero-sub">Nowe doświadczenie kinowe — szybkie przejścia, 3D karty, i miękka typografia.</p>
+        <div class="hero-cta">
+          <button id="discoverBtn" class="btn-primary">Odkryj teraz</button>
+          <button id="trailerBtn" class="btn-ghost" data-yt="B2qxIb96rvQ">Obejrzyj zwiastun</button>
+        </div>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
+
+    <section class="tabs" id="tabs">
+      <div class="tab-panels">
+        <div class="tab-panel" data-panel="home">
+          <h3 class="section-title">Najpopularniejsze</h3>
+          <div class="movie-gallery" id="movieGallery"></div>
+        </div>
+
+        <div class="tab-panel" data-panel="browse" hidden>
+          <h3 class="section-title">Kategorie</h3>
+          <div class="categories" id="categories"></div>
+        </div>
+
+        <div class="tab-panel" data-panel="mylist" hidden>
+          <h3 class="section-title">Twoja lista</h3>
+          <div class="movie-gallery" id="myListGallery"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Bluflix — Wszystkie prawa zastrzeżone</div>
+    <div>Liczba odwiedzin: <span id="visit-count">0</span></div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Przewiń do góry">▲</button>
+
+  <!-- Modal odtwarzacza -->
+  <div id="playerModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Odtwarzacz wideo">
+      <button class="modal-close" data-close aria-label="Zamknij">✕</button>
+      <div id="playerFrame" class="player-frame"></div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bluflix - Twoje Filmy</title>
   <link rel="stylesheet" href="style.css"/>
   <script defer src="script.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
   <div class="loader-wrapper"><div class="loader"></div></div>
